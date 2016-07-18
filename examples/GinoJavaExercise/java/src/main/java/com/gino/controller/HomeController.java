@@ -42,12 +42,12 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/game-stats/start/{id}")
-	public void startGame(@PathVariable Long id) {
+	public @ResponseBody void startGame(@PathVariable Long id) {
 		GameStats.startGame(id);
 	}
 	
 	@RequestMapping(value = "/game-stats/end/{id}")
-	public void endGame(@PathVariable Long id) {
+	public @ResponseBody void endGame(@PathVariable Long id) {
 		GameStats.endGame(id);
 	}
 
